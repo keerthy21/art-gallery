@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ─────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-gallery-ink bg-gallery-canvas antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+}
+
+/* ─── Reusable component classes ───────────────── */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-gallery-ink text-white font-body font-medium text-sm
+           tracking-wide transition-all duration-200
+           hover:bg-gallery-accent active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           border border-gallery-ink text-gallery-ink font-body font-medium text-sm
+           tracking-wide transition-all duration-200
+           hover:bg-gallery-ink hover:text-white active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           text-gallery-muted font-body text-sm
+           hover:text-gallery-ink transition-colors duration-200;
+  }
+
+  /* Card */
+  .artwork-card {
+    @apply bg-gallery-light border border-gallery-border
+           transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer;
+  }
+
+  /* Form inputs */
+  .form-input {
+    @apply w-full px-4 py-3 border border-gallery-border bg-white
+           text-gallery-ink font-body text-sm
+           focus:outline-none focus:border-gallery-ink transition-colors duration-200;
+  }
+
+  .form-label {
+    @apply block text-xs font-medium tracking-widest uppercase
+           text-gallery-muted mb-2;
+  }
+
+  /* Section */
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+
+  .container-gallery {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-block px-2 py-0.5 text-xs font-medium tracking-wide uppercase;
+  }
+
+  .badge-available {
+    @apply badge bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+
+  .badge-sold {
+    @apply badge bg-red-50 text-red-600 border border-red-200;
+  }
+
+  .badge-reserved {
+    @apply badge bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  /* Divider */
+  .divider-accent {
+    @apply w-12 h-px bg-gallery-accent;
+  }
+}
+
+/* ─── Utility overrides ─────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
