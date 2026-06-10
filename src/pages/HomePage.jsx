@@ -11,6 +11,22 @@ export default function HomePage() {
   const [featured, setFeatured] = useState([]);
   const [loading, setLoading] = useState(true);
 
+// ── Slider state ─────────────────────────────────
+const sliderImages = [
+  "/images/bg1.jpg",
+  "/images/bg2.jpg",
+];
+const [currentSlide, setCurrentSlide] = useState(0);
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentSlide((prev) =>
+      prev === sliderImages.length - 1 ? 0 : prev + 1
+    );
+  }, 4000); // changes every 4 seconds
+  return () => clearInterval(timer);
+}, []);
+
   useEffect(() => {
     getFeaturedArtworks()
       .then(setFeatured)
@@ -20,31 +36,15 @@ export default function HomePage() {
   const heroLines = t("home.heroTitle").split("\n");
 
   return (
-    <div>
+    <div className= "mt-[70px]">
+      
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gallery-ink">
-        {/* Background texture */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 70% 50%, #B5924C22 0%, transparent 60%), radial-gradient(circle at 20% 80%, #ffffff08 0%, transparent 50%)",
-          }}
-        />
-        <div
-          className="absolute right-0 top-0 bottom-0 w-1/2 opacity-30"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=1200&q=60')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            maskImage: "linear-gradient(to right, transparent 0%, black 40%)",
-            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 40%)",
-          }}
-        />
-
-        <div className="container-gallery relative z-10 pt-24 pb-20">
-          <div className="max-w-2xl">
-            <div className="w-10 h-px bg-gallery-accent mb-8" />
+      <section  className="bg-gallery-ink">
+        <div className="min-h-screen flex flex-col md:flex-row">
+          {/* Background texture */}
+     <div className="w-full md:w-1/2 min-h-screen flex items-center justify-center bg-gallery-ink px-6">
+          <div className="max-w-2xl text-center">
+            <div className="w-10 h-px bg-gallery-accent mb-8 mx-auto md:mx-0" />
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-tight">
               {heroLines.map((line, i) => (
                 <span key={i} className={i === 1 ? "text-gallery-accent block" : "block"}>
@@ -52,10 +52,10 @@ export default function HomePage() {
                 </span>
               ))}
             </h1>
-            <p className="mt-6 text-lg text-white/60 max-w-md leading-relaxed">
+            <p className="mt-6 text-lg text-white/60 max-w-md leading-relaxed mx-auto md:mx-0">
               {t("home.heroSubtitle")}
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
               <Link to="/gallery" className="btn-primary bg-gallery-accent hover:bg-white hover:text-gallery-ink px-8 py-4 text-sm tracking-wide">
                 {t("home.heroCta")}
               </Link>
@@ -64,14 +64,39 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
+       
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent" />
+     </div>
+     <div className="relative w-full md:w-1/2 min-h-screen bg-gallery-ink">
+       {/* ── Background image slider ── */}
+       {sliderImages.map((img, index) => (
+         <div
+           key={img}
+           
+           className="absolute inset-0 transition-opacity duration-1000"
+           style={{
+      opacity: index === currentSlide ? 1 : 0,
+      backgroundImage: `url('${img}')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center top",
+    }}
+  />
+))}</div>
+
+
+
         </div>
+      
+
+
+
+
+        
+
+      
       </section>
+
+
 
       {/* ── Featured Works ───────────────────────────────── */}
       <section className="section-pad">
