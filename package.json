@@ -2,7 +2,7 @@
   "name": "art-gallery",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://yourdomain.com",
+  "homepage": "https://ads-artgallery.com/",
 
   "dependencies": {
     "@stripe/react-stripe-js": "^2.5.0",
