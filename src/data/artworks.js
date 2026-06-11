@@ -54,6 +54,20 @@ export const artworks = [
       "Coastal Reverie draws from the artist's childhood summers on the Catalan coast. The horizon dissolves into layered blues and greens, inviting the viewer into a meditation on distance and belonging. A quiet painting — one that rewards time spent with it.",
     featured: true,
     tags: ["landscape", "ocean", "blue", "contemplative"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "2",
@@ -72,6 +86,20 @@ export const artworks = [
       "Part of a series photographing layered architectural surfaces across European capitals, Urban Palimpsest II captures the accumulated texture of a Berlin wall — years of paint, posters, and weather compressed into a single frame.",
     featured: true,
     tags: ["urban", "architecture", "monochrome", "texture"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "3",
@@ -90,6 +118,20 @@ export const artworks = [
       "Emergence is a hand-built stoneware sculpture fired at high temperature with a layered iron oxide glaze. The form references growth from mineral substrates — mineral, botanical, and somehow architectural all at once.",
     featured: true,
     tags: ["sculpture", "ceramic", "organic", "3d"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "4",
@@ -108,6 +150,20 @@ export const artworks = [
       "A domestic interior reduced to its essentials — table, window, morning light. Villanueva strips away narrative to leave only atmosphere, a feeling of inhabited space moments before activity resumes.",
     featured: false,
     tags: ["interior", "light", "domestic", "quiet"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "5",
@@ -126,6 +182,20 @@ export const artworks = [
       "Fracture Series #7 visualises seismic data from the 2023 Turkish earthquake through a custom generative algorithm. The result is both scientifically derived and unexpectedly beautiful — a record of enormous geological forces rendered as an abstract composition.",
     featured: false,
     tags: ["generative", "data", "geological", "abstract"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "6",
@@ -144,6 +214,20 @@ export const artworks = [
       "Shot on medium-format film in natural window light, Portrait in October Light is a departure from Brandt's architectural work — an intimate study of a friend's face in the quality of afternoon light particular to northern European autumn.",
     featured: false,
     tags: ["portrait", "film", "light", "intimate"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "7",
@@ -162,6 +246,20 @@ export const artworks = [
       "The first in a planned series of twelve, Deep Atlas I maps ocean floor bathymetric data as a painterly abstraction. At this scale, the shifts in depth register as passages of colour — aquatic, geological, and luminous.",
     featured: true,
     tags: ["ocean", "data", "large-scale", "blue"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "8",
@@ -180,6 +278,20 @@ export const artworks = [
       "A study from life, executed in a single session. Costa uses the side of the charcoal stick to build broad tonal masses, then lifts selectively with an eraser to create the highlights. The result has the directness and energy of observation in the moment.",
     featured: false,
     tags: ["figurative", "drawing", "hands", "charcoal"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "9",
@@ -198,6 +310,20 @@ export const artworks = [
       "Thrown on the wheel and altered by hand before firing, Vessel Form explores the tension between functional pottery and pure sculpture. The celadon glaze pools differently in each fold of the surface, ensuring every piece is unique.",
     featured: false,
     tags: ["ceramic", "vessel", "celadon", "craft"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "10",
@@ -216,6 +342,20 @@ export const artworks = [
       "In Borderlands, Villanueva abandons her usual painterly vocabulary for a more excavated surface. Built up in twenty-plus layers of oil and cold wax, sections are scraped back to reveal earlier stages — a geological record of the painting's own making.",
     featured: true,
     tags: ["abstract", "texture", "layered", "earthy"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "11",
@@ -234,6 +374,20 @@ export const artworks = [
       "Executed at night from a window view across Lisbon, Night Study captures the particular quality of artificial light on urban surfaces — sodium orange and shadow. A small, precise work that holds a whole city's atmosphere.",
     featured: false,
     tags: ["nocturne", "urban", "graphite", "Lisbon"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
   {
     id: "12",
@@ -252,5 +406,19 @@ export const artworks = [
       "Convergence was printed directly onto museum glass, so the work is simultaneously surface and depth. As light changes throughout the day, the image shifts — the printed layer seeming to float at different distances from the wall.",
     featured: false,
     tags: ["glass", "light", "abstract", "installation"],
+     variants: [
+    {
+      label: "Original",
+      image: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80",
+    },
+    {
+      label: "Framed",
+      image: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?w=800&q=80",
+    },
+    {
+      label: "On Wall",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+    },
+  ],
   },
 ];

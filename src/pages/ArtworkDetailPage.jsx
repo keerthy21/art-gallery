@@ -16,6 +16,7 @@ export default function ArtworkDetailPage() {
   const [related, setRelated] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,6 +25,8 @@ export default function ArtworkDetailPage() {
     getArtworkById(id)
       .then((data) => {
         setArtwork(data);
+        setSelectedImage(data.image); // ← add this line
+
         return getRelatedArtworks(id, data.category);
       })
       .then(setRelated)
@@ -80,9 +83,9 @@ export default function ArtworkDetailPage() {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden bg-gallery-warm">
               <img
-                src={artwork.image}
-                alt={artwork.title}
-                className="w-full h-full object-cover"
+                src={selectedImage || artwork.image}                alt={artwork.title}
+                className="w-full h-full object-cover transition-all duration-300"
+
               />
             </div>
            
@@ -120,6 +123,45 @@ export default function ArtworkDetailPage() {
                 </div>
               ))}
             </dl>
+            {/* ── Image Variants ─────────────────────────── */}
+{artwork.variants && artwork.variants.length > 0 && (
+  <div className="mt-8">
+    <h4 className="text-xs tracking-widest uppercase text-gallery-muted mb-3">
+      Preview Options
+    </h4>
+    <div className="flex flex-wrap gap-3">
+      {artwork.variants.map((variant, index) => {
+        const isSelected = selectedImage === variant.image;
+        return (
+          <button
+            key={index}
+            onClick={() => setSelectedImage(variant.image)}
+            className={`flex flex-col items-center gap-1.5 p-1 border-2 transition-all duration-200
+              ${isSelected
+                ? "border-gallery-accent"
+                : "border-gallery-border hover:border-gallery-ink"
+              }`}
+          >
+            {/* Thumbnail image */}
+            <div className="w-24 h-20 overflow-hidden bg-gallery-warm">
+              <img
+                src={variant.image}
+                alt={variant.label}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Label */}
+            <span className={`text-xs font-medium pb-0.5 ${
+              isSelected ? "text-gallery-accent" : "text-gallery-muted"
+            }`}>
+              {variant.label}
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  </div>
+)}
 
          
 
